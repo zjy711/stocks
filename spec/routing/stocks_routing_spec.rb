@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'routes for stocks', type: :routing do
   it 'routes root to stocks index action' do
-    expect(get('/')).to route_to('stocks#index')
+    expect(get('/')).to route_to('stocks#price_history')
   end
 
   it 'routes /index to stocks controller' do

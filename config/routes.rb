@@ -3,10 +3,14 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'stocks#index'
+  root 'stocks#price_history'
 
   resources :stocks, only: :index do
     resources :prices, only: :index
+    collection do
+      get :price_history
+      get :search_prices
+    end
   end
 
   # Example of regular route:
