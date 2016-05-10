@@ -1,0 +1,5 @@
+%tr{ class: 'stock', id: "stock_#{stock.id}" }
+  %td.id= stock.id
+  %td.name= stock.name
+  %td.created_at= stock.created_at.strftime('%Y-%m-%d')
+  %td= link_to 'View Price History', stock_prices_path(stock)

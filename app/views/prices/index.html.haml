@@ -1,0 +1,10 @@
+%h3 Price History for stock: #{@stock.name}
+
+%table#prices
+  %thead
+    %tr
+      %td ID
+      %td Date
+      %td Price
+  %tbody
+    = render @stock.prices

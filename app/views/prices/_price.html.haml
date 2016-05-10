@@ -1,0 +1,4 @@
+%tr{ class: 'price', id: "price_#{price.id}" }
+  %td.id= price.id
+  %td.name= price.date.strftime('%Y-%m-%d')
+  %td.created_at= "$#{price.price}"
