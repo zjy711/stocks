@@ -1,9 +1,14 @@
-%h1 Welcome to Stocks Page!
+.container
+  .row
+    .col-md-12
+      %h1.title Welcome to Stocks page
 
-%table#stocks
-  %thead
-    %tr
-      %td Name
-      %td Created At
-  %tbody
-    = render @stocks
+      %table.table.table-striped
+        %thead
+          %tr
+            %th ID
+            %th Name
+            %th Created At
+            %th
+        %tbody
+          = render @stocks

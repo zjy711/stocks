@@ -1,14 +1,14 @@
-%h1 Welcome to Stock Price History page!
+.container
+  .row
+    .col-md-12
+      %h1.title Welcome to Stock Price History page!
 
-#stock_price_history
-  %p Select a stock and view the price history in past 30 days.
+      #stock_price_history
+        %p Select a stock and view the price history in past 30 days.
 
-  = form_tag search_prices_stocks_path, method: :get, remote: true, id: 'stock_prices' do
-    .stocks
-      %label Stock Name
-      = collection_select(:stock, :id, Stock.all, :id, :name)
-
-  #price_history_chart
-    %p Price history chart
-    .chart{ style: 'width: 80%;height: 80%;'}
-      %canvas#chart
+        = form_tag search_prices_stocks_path, method: :get, remote: true, id: 'stock_prices' do
+          .stocks
+            %label Stock Name
+            = collection_select(:stock, :id, Stock.all, :id, :name)
+        #price_history_chart
+          %canvas#chart

@@ -14,6 +14,9 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # Use Haml
 gem 'haml'
+# Use Twitter bootstrap
+gem 'twitter-bootstrap-rails'
+
 # Use ChartJs
 gem 'chart-js-rails'
 # Use responders

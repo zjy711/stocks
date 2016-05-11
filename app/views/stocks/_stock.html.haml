@@ -2,4 +2,4 @@
   %td.id= stock.id
   %td.name= stock.name
   %td.created_at= stock.created_at.strftime('%Y-%m-%d')
-  %td= link_to 'View Price History', stock_prices_path(stock)
+  %td= link_to 'View Price History', stock_prices_path(stock), :class => 'btn btn-default btn-xs'

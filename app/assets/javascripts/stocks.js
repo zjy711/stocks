@@ -12,12 +12,16 @@ $(document).ready(function() {
     var dates = response.dates;
     var prices = response.prices;
     updateChart(chart, stock_name, dates, prices);
+    chart.options.animation.duration = 1000;
+
     return false;
   });
 
   $('form#stock_prices').submit();
 
   function createEmptyLineChart(){
+    if (!$("#chart").length) return;
+
     var emptyChart = new Chart($("#chart"), {
       type: 'line',
       data: {
@@ -34,11 +38,23 @@ $(document).ready(function() {
           pointBorderColor: "#4BC0C0",
           pointHoverBorderWidth: 2,
           pointRadius: 1,
-          pointHitRadius: 10,
-          responsive: false
+          pointHitRadius: 10
         }]
-      }
-    })
+      },
+
+      options: {
+        animation: {
+          duration: 0
+        },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+             }]
+          }
+        }
+      });
 
     return emptyChart;
   }
